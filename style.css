@@ -333,7 +333,7 @@ pre>code {
 }
 
 table {
-    /* text-align: justify; */
+    table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 3rem
@@ -342,6 +342,7 @@ table {
 td,
 th {
     padding: .5em;
+    word-break: break-word;
     border-bottom: 1px solid #4a4a4a
 }
 
