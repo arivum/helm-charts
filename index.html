@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Arivum Helm Charts</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.2.0/markdown-it.min.js"></script>
+</head>
+
+<body>
+    <h1>Arivum Helm Charts</h1>
+    <p>To add the <code>Arivum</code> Helm repository, run the following commands.</p>
+    <pre><code class="language-bash"># add arivum repo
+helm repo add arivum "https://arivum.github.io/helm-charts"
+
+# fetch latest repo information
+helm repo update
+
+# show available charts
+helm search repo arivum
+</code></pre>
+    <hr>
+    <h2>Helm Charts Description</h2>
+    <div class="flex-row">
+        <h5>Chart: </h5>
+        <form>
+            <select id="selected-chart">
+                <option value="dynratelimiter-operator">DynRateLimiter Operator&nbsp;</option>
+            </select>
+        </form>
+    </div>
+
+    <div id="chart-descriptions">
+    </div>
+
+    <script>
+        function init() {
+            var options = document.getElementById("selected-chart").children;
+            var md = new markdownit();
+            for (var i = 0; i < options.length; ++i) {
+                var mdName = options.item(i).value + ".md";
+                var option = options.item(i)
+                var div = document.createElement("div")
+                div.id = option.value
+                document.getElementById("chart-descriptions").append(div)
+                fetch(mdName)
+                    .then(function(response) {
+                        return response.blob();
+                    })
+                    .then(function(data) {
+                        return data.text()
+                    })
+                    .then(function(data) {
+                        console.log(md.render(data))
+                        return document.getElementById(option.value).innerHTML = md.render(data);
+                    })
+            }
+        }
+        init()
+
+        function showSelected(ev) {
+            var descriptions = document.getElementById("chart-descriptions").children;
+            for (var i = 0; i < descriptions.length; ++i) {
+                descriptions.item(i).classList.add('d-none');
+            }
+            var select = document.getElementById("selected-chart");
+            var value = select.options[select.selectedIndex].value;
+            document.getElementById(value).classList.remove('d-none');
+        }
+        document.getElementById('selected-chart').onchange = showSelected
+        showSelected();
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>
