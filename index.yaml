@@ -3,11 +3,11 @@ entries:
   dynratelimiter-operator:
   - apiVersion: "1"
     appVersion: 0.1.3
-    created: "2021-10-30T22:13:49.444128812Z"
+    created: "2021-10-30T22:37:14.889056008Z"
     description: Dynamic Rate Limiter Kubernetes Operator
-    digest: 5313c1755712ea7e0404e62a3df26034c1cbbae9c94ca73748e8481df9bcebfc
+    digest: 498ccd99eb1a7ea744260b04faf39e4557701d1b82c1d858a2f03ffdf6b89bb8
     name: dynratelimiter-operator
     urls:
     - https://arivum.github.io/helm-charts/dynratelimiter-operator-0.1.3.tgz
     version: 0.1.3
-generated: "2021-10-30T22:13:49.4434724Z"
+generated: "2021-10-30T22:37:14.888183164Z"
