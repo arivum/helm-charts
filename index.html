@@ -48,7 +48,7 @@ helm search repo arivum
                 var div = document.createElement("div")
                 div.id = option.value
                 document.getElementById("chart-descriptions").append(div)
-                fetch(mdName)
+                fetch("https://arivum.github.io/helm-charts/" + mdName)
                     .then(function(response) {
                         return response.blob();
                     })
@@ -56,8 +56,8 @@ helm search repo arivum
                         return data.text()
                     })
                     .then(function(data) {
-                        console.log(md.render(data))
-                        return document.getElementById(option.value).innerHTML = md.render(data);
+                        document.getElementById(option.value).innerHTML = md.render(data);
+                        hljs.highlightAll();
                     })
             }
         }
