@@ -658,6 +658,10 @@ a:hover {
     flex-direction: row
 }
 
+.flex-row.align-right {
+    justify-content: flex-end;
+}
+
 .flex-column {
     display: flex;
     flex-wrap: wrap;
@@ -724,4 +728,31 @@ div#chart-descriptions {
 
 .d-none {
     display: none;
+}
+
+a.btn.btn-light {
+    padding: .5rem 1rem;
+    background-color: white;
+    color: #333;
+    font-size: 14pt;
+    text-decoration: none;
+    border-radius: 8px;
+    min-width: 32px;
+    text-align: center;
+    display: inline-block;
+    border: none;
+}
+
+a.btn.btn-light:hover {
+    background-color: #c5c9d3;
+}
+
+i.fab,
+i.fas,
+i.far {
+    margin-right: 4px;
+}
+
+footer {
+    padding-top: 3rem;
 }
