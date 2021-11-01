@@ -3,7 +3,7 @@ entries:
   dynratelimiter-operator:
   - apiVersion: "1"
     appVersion: 0.1.3
-    created: "2021-11-01T14:54:37.298687564Z"
+    created: "2021-11-01T14:58:30.793492073Z"
     description: Dynamic Rate Limiter Kubernetes Operator
     digest: 498ccd99eb1a7ea744260b04faf39e4557701d1b82c1d858a2f03ffdf6b89bb8
     name: dynratelimiter-operator
@@ -12,7 +12,7 @@ entries:
     version: 0.1.3
   - apiVersion: "1"
     appVersion: 0.1.2
-    created: "2021-11-01T14:54:37.298097262Z"
+    created: "2021-11-01T14:58:30.793031764Z"
     description: Dynamic Rate Limiter Kubernetes Operator
     digest: 0b6d9ded92f7e7ecd261f892396c1b69f9385fc5d7d2849f24962c6dd746464b
     name: dynratelimiter-operator
@@ -21,7 +21,7 @@ entries:
     version: 0.1.2
   - apiVersion: "1"
     appVersion: 0.1.1
-    created: "2021-11-01T14:54:37.297620461Z"
+    created: "2021-11-01T14:58:30.785599929Z"
     description: Dynamic Rate Limiter Kubernetes Operator
     digest: d2a599d8b67a6e169e7c10804d0ea9baad0c11c2e9d55a4dd16200cb7d252248
     name: dynratelimiter-operator
@@ -30,7 +30,7 @@ entries:
     version: 0.1.1
   - apiVersion: "1"
     appVersion: 0.1.0
-    created: "2021-11-01T14:54:37.29702266Z"
+    created: "2021-11-01T14:58:30.785128921Z"
     description: Dynamic Rate Limiter Kubernetes Operator
     digest: 9050ca255da8b696ecf1601d49b323c949cd733ec21a844301c7ddffab676342
     name: dynratelimiter-operator
@@ -40,12 +40,12 @@ entries:
   netpolviz:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2021-11-01T14:54:37.299286065Z"
+    created: "2021-11-01T14:58:30.793999882Z"
     description: A Helm chart for Kubernetes
-    digest: 5565632232d4c6b409c10fa6a4866521ed370a5d0e16c3a85ddff4e04b37c851
+    digest: 5134b4e1cc76d2df827273ef9281794f6bba9346819cb57a756f6d0b468d678a
     name: netpolviz
     type: application
     urls:
     - https://arivum.github.io/helm-charts/netpolviz-0.1.0.tgz
     version: 0.1.0
-generated: "2021-11-01T14:54:37.296236859Z"
+generated: "2021-11-01T14:58:30.784461308Z"
