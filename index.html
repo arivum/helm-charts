@@ -61,13 +61,13 @@ helm search repo arivum
     <script>
         function init() {
             var options = document.getElementById("selected-chart").children;
-            var md = new markdownit();
             for (var i = 0; i < options.length; ++i) {
-                var mdName = options.item(i).value + ".md";
-                var option = options.item(i)
-                var div = document.createElement("div")
+                let md = new markdownit();
+                let mdName = options.item(i).value + ".md";
+                let option = options.item(i)
+                let div = document.createElement("div")
                 div.id = option.value
-                document.getElementById("chart-descriptions").append(div)
+                document.getElementById("chart-descriptions").appendChild(div)
                 fetch("https://arivum.github.io/helm-charts/" + mdName)
                     .then(function(response) {
                         return response.blob();
