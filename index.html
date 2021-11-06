@@ -63,41 +63,58 @@ helm search repo arivum
 
     <script>
         function init() {
-            var options = document.getElementById("selected-chart").children;
+            var options = document.getElementById("selected-chart").children
             for (var i = 0; i < options.length; ++i) {
-                let md = new markdownit();
-                let mdName = options.item(i).value + ".md";
+                let md = new markdownit()
+                let mdName = options.item(i).value + ".md"
                 let option = options.item(i)
                 let div = document.createElement("div")
                 div.id = option.value
                 document.getElementById("chart-descriptions").appendChild(div)
                 fetch("https://arivum.github.io/helm-charts/" + mdName)
                     .then(function(response) {
-                        return response.blob();
+                        return response.blob()
                     })
                     .then(function(data) {
                         return data.text()
                     })
                     .then(function(data) {
-                        document.getElementById(option.value).innerHTML = md.render(data);
-                        hljs.highlightAll();
+                        document.getElementById(option.value).innerHTML = md.render(data)
+                        hljs.highlightAll()
                     })
             }
         }
         init()
 
         function showSelected(ev) {
-            var descriptions = document.getElementById("chart-descriptions").children;
+            var descriptions = document.getElementById("chart-descriptions").children
             for (var i = 0; i < descriptions.length; ++i) {
-                descriptions.item(i).classList.add('d-none');
+                descriptions.item(i).classList.add('d-none')
             }
-            var select = document.getElementById("selected-chart");
-            var value = select.options[select.selectedIndex].value;
-            document.getElementById(value).classList.remove('d-none');
+            var select = document.getElementById("selected-chart")
+            var value = select.options[select.selectedIndex].value
+            document.getElementById(value).classList.remove('d-none')
+            var searchParams = new URLSearchParams(window.location.search)
+            if (value != searchParams.get("chart")) {
+                searchParams.set("chart", value)
+                window.location.search = searchParams.toString()
+            }
         }
         document.getElementById('selected-chart').onchange = showSelected
-        showSelected();
-        hljs.highlightAll();
+
+        var selectedChart = (new URLSearchParams(window.location.search)).get("chart")
+        if (selectedChart !== "") {
+            var options = document.getElementById("selected-chart").children
+            for (var i = 0; i < options.length; ++i) {
+                if (options.item(i).value == selectedChart) {
+                    options.item(i).setAttribute("selected", "selected")
+                    document.getElementById("selected-chart").dispatchEvent(new Event("change"))
+                }
+            }
+        }
+
+        showSelected()
+        hljs.highlightAll()
     </script>
 </body>
 
