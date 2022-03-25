@@ -2,8 +2,17 @@ apiVersion: v1
 entries:
   dynratelimiter-operator:
   - apiVersion: "1"
+    appVersion: 0.1.5
+    created: "2022-03-25T03:24:18.417289405Z"
+    description: Dynamic Rate Limiter Kubernetes Operator
+    digest: 6a69040dba7253602f19578145ebb8b28e460c5c809cbefde4ee4b8694ac2070
+    name: dynratelimiter-operator
+    urls:
+    - https://arivum.github.io/helm-charts/dynratelimiter-operator-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: "1"
     appVersion: 0.1.4
-    created: "2022-03-05T01:56:40.79129212Z"
+    created: "2022-03-25T03:24:18.416839104Z"
     description: Dynamic Rate Limiter Kubernetes Operator
     digest: 4543390d85e0ea50deb60379dc99641349dc481924b2761cd267b3af83a25378
     name: dynratelimiter-operator
@@ -12,7 +21,7 @@ entries:
     version: 0.1.4
   - apiVersion: "1"
     appVersion: 0.1.3
-    created: "2022-03-05T01:56:40.790749806Z"
+    created: "2022-03-25T03:24:18.416390703Z"
     description: Dynamic Rate Limiter Kubernetes Operator
     digest: 498ccd99eb1a7ea744260b04faf39e4557701d1b82c1d858a2f03ffdf6b89bb8
     name: dynratelimiter-operator
@@ -21,7 +30,7 @@ entries:
     version: 0.1.3
   - apiVersion: "1"
     appVersion: 0.1.2
-    created: "2022-03-05T01:56:40.790295194Z"
+    created: "2022-03-25T03:24:18.415926103Z"
     description: Dynamic Rate Limiter Kubernetes Operator
     digest: 0b6d9ded92f7e7ecd261f892396c1b69f9385fc5d7d2849f24962c6dd746464b
     name: dynratelimiter-operator
@@ -30,7 +39,7 @@ entries:
     version: 0.1.2
   - apiVersion: "1"
     appVersion: 0.1.1
-    created: "2022-03-05T01:56:40.789859483Z"
+    created: "2022-03-25T03:24:18.415338002Z"
     description: Dynamic Rate Limiter Kubernetes Operator
     digest: d2a599d8b67a6e169e7c10804d0ea9baad0c11c2e9d55a4dd16200cb7d252248
     name: dynratelimiter-operator
@@ -39,7 +48,7 @@ entries:
     version: 0.1.1
   - apiVersion: "1"
     appVersion: 0.1.0
-    created: "2022-03-05T01:56:40.789406271Z"
+    created: "2022-03-25T03:24:18.414872501Z"
     description: Dynamic Rate Limiter Kubernetes Operator
     digest: 9050ca255da8b696ecf1601d49b323c949cd733ec21a844301c7ddffab676342
     name: dynratelimiter-operator
@@ -49,7 +58,7 @@ entries:
   netpolviz:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2022-03-05T01:56:40.791817434Z"
+    created: "2022-03-25T03:24:18.418041606Z"
     description: A Helm chart for Kubernetes
     digest: 8cff3c4dc7f80d5c56a74d481b1279b2201a62f2ebe4b86f18b103130c0608d7
     name: netpolviz
@@ -57,4 +66,4 @@ entries:
     urls:
     - https://arivum.github.io/helm-charts/netpolviz-0.1.0.tgz
     version: 0.1.0
-generated: "2022-03-05T01:56:40.788770355Z"
+generated: "2022-03-25T03:24:18.413887299Z"
